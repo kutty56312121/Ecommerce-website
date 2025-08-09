@@ -1,1 +1,31 @@
-README FULL stack ecomerce app
+Ecommerce Monorepo
+
+Apps:
+- client (Vite React)
+- admin (Vite React)
+- server (Express + MongoDB)
+
+Setup
+1) Server
+  cp server/.env.example server/.env
+  Edit JWT_SECRET and MONGODB_URI
+  cd server && npm run dev
+
+2) Client
+  cp client/.env.example client/.env
+  cd client && npm run dev
+
+3) Admin
+  cp admin/.env.example admin/.env
+  cd admin && npm run dev
+
+API
+- POST   /api/auth/signup
+- POST   /api/auth/login
+- GET    /api/auth/me
+- POST   /api/products  (admin)
+- GET    /api/products
+- GET    /api/products/:id
+- PUT    /api/products/:id  (admin)
+- DELETE /api/products/:id  (admin)
+- GET    /api/users  (admin)
